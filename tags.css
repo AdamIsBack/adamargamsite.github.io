@@ -1,0 +1,184 @@
+/* tags.css */
+
+/* Filter section styling */
+.filter {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: center; /* Center content horizontally */
+    margin-bottom: 20px;
+    gap: 10px; /* Space between the label and the dropdown */
+}
+
+.filter label {
+    font-size: 32\px;
+    color: #a68ab7; /* White text to match dark theme */
+    margin-right: 10px; /* Space between the label and the dropdown */
+    font-weight: bold; /* Make the label stand out */
+}
+
+/* Retro theme filter label */
+body.retro-theme .filter label {
+    color: #333344;
+}
+
+/* Styling for the tags */
+.tags {
+    margin-top: 13px;
+}
+
+/* Base styling for all tags */
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+    color: #fff; /* White text for contrast */
+    background-color: #4d4d4d;
+}
+
+/* Engine and Language tags */
+.tag-engine {
+    background-color: #4c3a62; /* Dark purple for engines */
+}
+
+.tag-lang {
+    background-color: #3a647a; /* Dark blue for programming languages */
+}
+
+/* Special tags */
+.tag-new {
+    background-image: linear-gradient(45deg, #00ff62, #0072ff);
+}
+
+/* Dimension tags */
+.tag-2d {
+    background-color: #ff7e5f; /* Sunset orange */
+}
+
+.tag-25d {
+    background: linear-gradient(to right, #ff7e5f, #dd2476);
+}
+
+.tag-3d {
+    background-color: #dd2476; /* Magenta */
+}
+
+/* Feature tags */
+.tag-play {
+    background-image: linear-gradient(45deg, #00c853, #ffd600);
+}
+
+/* Technical tags */
+.tag[class="tag"] { /* Default tag style for technical tags */
+    background-color: #4d4d4d;
+}
+
+/* Role/specialty tags */
+.tag-tooling {
+    background-color: #607d8b; /* Blue grey */
+}
+
+.tag-editor {
+    background-color: #795548; /* Brown */
+}
+
+.tag-physics {
+    background-color: #009688; /* Teal */
+}
+
+.tag-system {
+    background-color: #673ab7; /* Deep Purple */
+}
+
+.tag-performance {
+    background-color: #ff5722; /* Deep Orange */
+}
+
+.tag-algorithm {
+    background-color: #2196f3; /* Blue */
+}
+
+.tag-ai {
+    background-color: #e91e63; /* Pink */
+}
+
+.tag-graphics {
+    background-color: #9c27b0; /* Purple */
+}
+
+.tag-hardware {
+    background-color: #ff9800; /* Orange */
+}
+
+.tag-input {
+    background-color: #4caf50; /* Green */
+}
+
+/* Styling for the select dropdown */
+#tag-filter,
+#tag-filter-small {
+    width: 215px;
+    padding: 10px;
+    padding-right: 0;
+    font-size: 20px;
+    border: 1px solid #4c3a62; /* Dark purple border */
+    border-radius: 5px;
+    background-color: #2c2c2c; /* Dark background */
+    color: #fff; /* White text */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    appearance: none; /* Remove default dropdown arrow on some browsers */
+}
+
+/* Change background color and border on focus */
+#tag-filter:focus,
+#tag-filter-small:focus {
+    background-color: #3a3a3a; /* Slightly lighter dark background */
+    border-color: #7e5ba5; /* Lighter purple border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Style the dropdown options */
+#tag-filter option,
+#tag-filter-small option {
+    background-color: #2c2c2c; /* Same dark background as the select */
+    color: #fff; /* White text */
+}
+
+/* Selected option effect: Update background of select to match the option */
+#tag-filter:active, #tag-filter option:checked,
+#tag-filter-small:active, #tag-filter-small option:checked {
+    background-color: #3a647a; /* Background for the selected option */
+    color: #fff; /* White text for contrast */
+}
+
+/* Optional: Custom dropdown arrow for the select */
+#tag-filter::after,
+#tag-filter-small::after {
+    /* content: '▼'; */
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+}
+
+/* Retro theme select dropdown */
+body.retro-theme #tag-filter,
+body.retro-theme #tag-filter-small {
+    background-color: #f5deb3;
+    color: #333344;
+    border-color: #d4881e;
+}
+
+body.retro-theme #tag-filter:focus,
+body.retro-theme #tag-filter-small:focus {
+    background-color: #f3eac2;
+    border-color: #d4881e;
+}
+
+body.retro-theme #tag-filter option,
+body.retro-theme #tag-filter-small option {
+    background-color: #f5deb3;
+    color: #333344;
+}

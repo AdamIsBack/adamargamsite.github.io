@@ -1,0 +1,82 @@
+.tool-section {
+    padding-bottom: 40px;
+}
+
+.tool-header {
+    font-size: 36px;
+    color: #a68ab7;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tool-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(1px, 1fr));
+    gap: 16px;
+    justify-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.tool img {
+    width: 36px;
+    height: 36px;
+    background: white;
+    border-radius: 6px;
+    padding: 4px;
+    margin-bottom: 6px;
+}
+
+.tool h2 {
+    font-size: 13px;
+    margin: 4px 0 2px;
+    color: #d6b3ff;
+}
+
+.tool p {
+    font-size: 11px;
+    color: #ccc;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.tool:hover {
+    transform: scale(1.1);
+}
+
+/* Retro theme color overrides */
+body.retro-theme .tool-header {
+    color: #f4a460; /* replace #a68ab7 light purple */
+}
+
+body.retro-theme .tool {
+    background: #e6d5bd;
+}
+
+body.retro-theme .tool h2 {
+    color: #d4a574; /* replace #d6b3ff soft purple */
+}
+
+body.retro-theme .tool p {
+    color: #333344;
+}
+
+@media (max-width: 600px) {
+    .tool-container {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 300px;
+    }
+  }
