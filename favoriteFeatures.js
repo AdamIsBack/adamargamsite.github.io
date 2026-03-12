@@ -143,9 +143,13 @@ function generateFeatureList() {
         return;
     }
     
-    const isIndexPage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
+    // Determine if current page should be treated like the index (home or game design page)
+    const path = window.location.pathname;
+    const isHomePage = path === '/' || path.endsWith('index.html');
+    const isGamePage = path.endsWith('game.html');
+    const isIndexPage = isHomePage || isGamePage;
 
-    // Filter features based on showOnIndex property when on index page
+    // Filter features based on showOnIndex property when on index-style pages
     const featuresToShow = isIndexPage ? features.filter(feature => feature.showOnIndex) : features;
     
     featuresToShow.forEach(feature => {

@@ -1,0 +1,56 @@
+/* Styles for the interactive landing page */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+    background: #000;
+}
+
+#split-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.panel {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    transition: flex 0.2s ease;
+}
+
+.panel video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.panel .label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 0 0 8px rgba(0,0,0,0.8);
+    pointer-events: none;
+}
+
+/* optionally dim the video on hover */
+.panel:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+}
