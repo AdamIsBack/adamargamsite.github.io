@@ -6,13 +6,13 @@
 
 .construction-container h1 {
     font-size: 60px;
-    color: #a68ab7; /* Light purple header */
+    color: #ff157d; /* Pink header */
     margin-bottom: 20px;
 }
 
 .construction-container p {
     font-size: 20px;
-    color: #ddd;
+    color: #fff;
     margin-bottom: 40px;
 }
 
@@ -20,17 +20,17 @@
 .progress-bar {
     width: 60%;
     height: 30px;
-    background-color: #2c2c3a;
+    background-color: #ff157d;
     border-radius: 15px;
     margin: 0 auto 30px;
     overflow: hidden;
-    border: 2px solid #4c3a62;
+    border: 2px solid #a81350;
 }
 
 .progress-fill {
     width: 50%;
     height: 100%;
-    background-color: #a68ab7;
+    background-color: #ff157d;
     animation: progress-animation 5s infinite ease-in-out;
 }
 
@@ -47,12 +47,12 @@
 }
 
 .links a {
-    color: #c092f5;
+    color: #ff6b9d;
     text-decoration: none;
 }
 
 .links a:hover {
-    color: #884eca;
+    color: #ff0080;
     text-decoration: underline;
 }
 

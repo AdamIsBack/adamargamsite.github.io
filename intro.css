@@ -100,6 +100,45 @@ html, body {
     transition: transform 0.2s ease, text-shadow 0.2s ease;
 }
 
+/* Big text overlays on video panels */
+.video-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 6rem);
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(0,0,0,0.8);
+    text-decoration: none;
+    z-index: 5;
+    pointer-events: auto;
+    background: rgba(0,0,0,0.4);
+    padding: 0.6rem 1rem;
+    border-radius: 15px;
+}
+
+.left-label {
+    left: 50px;
+}
+
+.right-label {
+    right: 5px;
+    text-align: right;
+}
+
+#banner .banner-label {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(0,0,0,0.8);
+    pointer-events: auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
 /* bottom footer banner */
 #footer-banner {
     position: fixed;
@@ -121,4 +160,37 @@ html, body {
 #banner .banner-label:hover {
     transform: scale(1.05);
     text-shadow: 0 0 16px rgba(255,255,255,0.6);
+}
+
+.video-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 6rem);
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(0,0,0,0.8);
+    text-decoration: none;
+    z-index: 5;
+    pointer-events: auto;
+    background: rgba(255, 21, 125, 0.4);
+    padding: 0.6rem 1rem;
+    border-radius: 15px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    white-space: nowrap;
+}
+
+.video-label:hover {
+    transform: translateY(-50%);
+    box-shadow: 0 0 24px rgba(255,255,255,0.75);
+    background: rgba(255, 21, 125, 0.55);
+}
+
+.left-label {
+    left: 10%;
+}
+
+.right-label {
+    right: 10%;
+    text-align: right;
 }

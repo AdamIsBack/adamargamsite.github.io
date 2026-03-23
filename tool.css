@@ -4,7 +4,7 @@
 
 .tool-header {
     font-size: 36px;
-    color: #a68ab7;
+    color: #ff157d;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -43,12 +43,12 @@
 .tool h2 {
     font-size: 13px;
     margin: 4px 0 2px;
-    color: #d6b3ff;
+    color: #ff6b9d;
 }
 
 .tool p {
     font-size: 11px;
-    color: #ccc;
+    color: #fff;
     margin: 0;
     line-height: 1.2;
 }

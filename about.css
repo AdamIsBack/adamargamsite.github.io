@@ -18,7 +18,7 @@ h1 {
 }
 
 section {
-    color: #ddd; /* Light grey text */
+    color: #fff; /* White text */
     padding: 20px;
     margin-bottom: 0;
     margin-left: 15%;
@@ -27,13 +27,35 @@ section {
 }
 
 .background-section{
-    background-color: #2c2c3a; /* Dark grey background for sections */
-    border-left: 4px solid #a68ab7;
+    background-color: #ff157d; /* Pink brand background for sections */
+    color: var(--brand-surface-text);
+    border-left: 4px solid #ff157d;
+}
+
+.background-section h2 {
+    color: var(--brand-surface-text);
+}
+
+.background-section p {
+    color: var(--brand-surface-text);
+}
+
+.background-section a.link {
+    color: var(--brand-surface-muted);
+}
+
+.background-section a.link:hover {
+    color: var(--brand-surface-text);
+}
+
+.background-section .text-highlight {
+    color: var(--brand-surface-text);
+    background-color: rgba(255, 243, 248, 0.25);
 }
 
 section h2 {
     font-size: 24px;
-    color: #d6b3ff; /* Soft purple for section titles */
+    color: #ff6b9d; /* Soft pink for section titles */
     margin-bottom: 10px;
 }
 
@@ -44,11 +66,11 @@ section p {
 }
 
 a.link {
-    color: #c092f5; /* Lighter blue for better visibility */
+    color: #ff6b9d; /* Lighter pink for better visibility */
 }
 
 a.link:hover {
-    color: #884eca; /* Even lighter blue on hover */
+    color: #ff0080; /* Darker pink on hover */
 }
 
 .image-content {
@@ -75,8 +97,8 @@ a.link:hover {
     width: 500px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
     border-radius: 12px; /* Optional: round corners of the photo */
-    border: 3px solid #a68ab7;
-    box-shadow: 0 8px 24px rgba(166, 138, 183, 0.3);
+    border: 3px solid #ff157d;
+    box-shadow: 0 8px 24px rgba(255, 21, 125, 0.3);
     margin-left: 20px; /* Space between text and image */
     margin-right: 5%; /* Space between text and image */
     margin-bottom: 0;
@@ -85,8 +107,8 @@ a.link:hover {
     width: 500px; /* Smaller second image */
     height: auto; /* Maintain aspect ratio */
     border-radius: 12px; /* Optional: round corners */
-    border: 3px solid #a68ab7;
-    box-shadow: 0 8px 24px rgba(166, 138, 183, 0.3);
+    border: 3px solid #ff157d;
+    box-shadow: 0 8px 24px rgba(255, 21, 125, 0.3);
     margin-top: 10px; /* Space between the two images */
 }
 
@@ -95,7 +117,7 @@ button:not(.theme-toggle) {
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background-color: #884eca; /* Purple background */
+    background-color: #ff0080; /* Pink background */
     border: none;
     padding: 10px 20px;
     margin-top: 25px;
@@ -109,7 +131,7 @@ button:not(.theme-toggle) {
 }
 
 button:not(.theme-toggle):hover {
-    background-color: #a16ee0; /* Slightly lighter purple */
+    background-color: #ff4a8c; /* Slightly lighter pink */
     transform: translateY(-2px); /* Lift effect */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
@@ -122,7 +144,7 @@ button:not(.theme-toggle):active {
 /* Styling for text enhancements */
 .text-highlight {
     font-size: 18px;
-    color: #c092f5; /* Light purple for emphasis */
+    color: #ff6b9d; /* Light pink for emphasis */
     background-color: rgba(136, 78, 202, 0.1); /* Subtle purple background */
     padding: 2px 4px;
     border-radius: 4px;
@@ -141,7 +163,7 @@ button:not(.theme-toggle):active {
 
 /* Styling for the header of the timeline */
 .timeline h2 {
-    color: #d6b3ff;
+    color: #ff6b9d;
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -161,7 +183,7 @@ button:not(.theme-toggle):active {
 
 .timeline-year h2 {
     font-size: 28px;
-    color: #c092f5;
+    color: #ff6b9d;
     z-index: 1;
 }
 
@@ -179,7 +201,7 @@ button:not(.theme-toggle):active {
     top: 20px; /* Start below the dot */
     bottom: -15px; /* Extend down to the next dot */
     width: 2px; /* Width of the line */
-    background-color: #c092f5; /* Line color */
+    background-color: #ff6b9d; /* Line color */
     z-index: 0; /* Ensure it's behind the content but above the main line */
 }
 
@@ -187,7 +209,7 @@ button:not(.theme-toggle):active {
 .timeline-dot {
     width: 20px;
     height: 20px;
-    background-color: #c092f5; /* Dot color */
+    background-color: #ff6b9d; /* Dot color */
     border-radius: 50%; /* Make the dot round */
     position: absolute;
     left: 0; /* Align dot to the left of the line */
@@ -197,12 +219,13 @@ button:not(.theme-toggle):active {
 
 /* Content box for each event */
 .timeline-content {
-    background-color: #2c2c3a;
+    background-color: #ff157d;
+    color: var(--brand-surface-text);
     padding: 15px;
     border-radius: 10px;
     display: inline-block;
     max-width: 70%;
-    margin-left: 40px; /* Add space to the left of content */
+    margin-left: 40px;
     transition: background-color 0.5s ease;
 }
 
@@ -212,7 +235,7 @@ body.retro-theme .timeline-content {
 }
 
 .timeline-content:hover {
-    background-color: #3b3b4b;
+    background-color: #ff4a9a;
 }
 
 body.retro-theme .timeline-content:hover {
@@ -223,25 +246,25 @@ body.retro-theme .timeline-content:hover {
 .timeline-content h3 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #c092f5;
+    color: var(--brand-surface-text);
 }
 
 /* Paragraph styling inside the event content */
 .timeline-content p {
     font-size: 16px;
-    color: #ddd;
+    color: var(--brand-surface-text);
     margin-bottom: 10px;
 }
 
 /* Links inside the timeline content */
 .timeline-content a {
-    color: #c092f5;
+    color: var(--brand-surface-muted);
     font-size: 16px;
     text-decoration: none;
 }
 
 .timeline-content a:hover {
-    color: #884eca;
+    color: var(--brand-surface-text);
 }
 
 /* Retro theme color overrides for about page */
@@ -379,4 +402,150 @@ body.retro-theme .profile-photo-stage {
     section p {
         font-size: 14px; /* Reduce font size for section text */
     }
+}
+/* Gradient background for featured sections */
+.gradient-section {
+    background: linear-gradient(135deg, #ff157d 0%, #980000 100%);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(255, 21, 125, 0.3);
+}
+
+.gradient-section h3 {
+    color: #fff;
+    margin-top: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.gradient-section p {
+    color: rgba(255,255,255,0.95);
+    line-height: 1.6;
+}
+
+/* Experience timeline styling */
+.experience-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #ff157d;
+    color: var(--brand-surface-text);
+    border-left: 4px solid #ff157d;
+    border-radius: 8px;
+    position: relative;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: 20px;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #ff157d 0%, #980000 100%);
+    border-radius: 50%;
+    border: 3px solid #ff157d;
+}
+
+.experience-item h4 {
+    color: var(--brand-surface-text);
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.experience-item .role {
+    color: var(--brand-surface-muted);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.experience-item .company {
+    color: var(--brand-surface-text);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.experience-item .description {
+    color: var(--brand-surface-text);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.experience-item .highlights {
+    color: var(--brand-surface-muted);
+    font-size: 13px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Skills grid for competencies */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill-card {
+    background: #ff157d;
+    color: var(--brand-surface-text);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border-top: 3px solid #ff157d;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(255, 21, 125, 0.2);
+    border-top-color: #980000;
+}
+
+.skill-card .skill-name {
+    color: var(--brand-surface-text);
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.skill-card .skill-rating {
+    background: linear-gradient(135deg, var(--brand-surface-text) 0%, #980000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Languages section */
+.languages-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.language-card {
+    background: #ff157d;
+    color: var(--brand-surface-text);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #ff157d;
+}
+
+.language-card .language-name {
+    color: var(--brand-surface-text);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.language-card .language-level {
+    color: var(--brand-surface-muted);
+    font-size: 12px;
+    font-style: italic;
 }

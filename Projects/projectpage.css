@@ -1,6 +1,6 @@
 /* Basic Elements */
 h2 {
-    color: #a68ab7;
+    color: #ff157d;
     margin-bottom: 10px;
 }
 
@@ -30,14 +30,14 @@ p {
 .description {
     flex: 1 1 60%;
     max-width: 45%;
-    color: #ddd;
+    color: #fff;
     font-size: 16px;
 }
 
 .descriptionwide {
     flex: 1 1 60%;
     max-width: 70%;
-    color: #ddd;
+    color: #fff;
     font-size: 16px;
 }
 
@@ -47,7 +47,7 @@ p {
 
 .flex-item {
     flex: 1;
-    color: #ddd;
+    color: #fff;
     font-size: 16px;
 }
 
@@ -74,7 +74,7 @@ p {
     padding: 15px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    color: #ddd;
+    color: #fff;
     width: calc(50% - 20px);
     text-align: left;
     font-size: 16px;
@@ -84,7 +84,7 @@ p {
 
 .detail-item i {
     font-size: 24px;
-    color: #a68ab7;
+    color: #ff157d;
     margin-right: 15px;
     transition: transform 0.3s ease;
 }
@@ -146,7 +146,7 @@ p {
 .image-container figcaption {
     margin-top: 8px;
     font-size: 14px;
-    color: #a68ab7;
+    color: #ff157d;
     font-style: italic;
 }
 /* Image Width Classes */
@@ -208,7 +208,7 @@ p {
 
 /* Image Caption */
 .image-container figcaption {
-    color: #a68ab7;
+    color: #ff157d;
     margin-top: 10px;
     font-style: italic;
     font-size: 14px;
@@ -245,7 +245,7 @@ body.retro-theme pre code {
 }
 
 .project-links h2 {
-    color: #a68ab7;
+    color: #ff157d;
     font-size: 24px;
     margin-bottom: 15px;
     text-align: center;
@@ -282,24 +282,24 @@ body.retro-theme pre code {
     padding: 15px 20px; /* Add padding to the anchor instead of the li */
     border-radius: 12px; /* Apply the same rounded corners */
     text-decoration: none;
-    color: #ddd;
+    color: #fff;
     background-color: transparent;
     transition: background-color 0.4s ease, color 0.3s ease; /* Smooth background and color transition */
 }
 
 .link-list a:hover {
     background-color: #2d2d3a;
-    color: #7e5ba5; /* Text color on hover */
+    color: #ff4a8c; /* Pink on hover */
 }
 
 .link-list i {
     font-size: 24px;
-    color: #a68ab7;
+    color: #ff157d;
     transition: color 0.3s ease;
 }
 
 .link-list a:hover i {
-    color: #7e5ba5;
+    color: #ff4a8c;
 }
 
 /* Container for the image slider and caption */
@@ -368,7 +368,7 @@ body.retro-theme pre code {
 .blueprint-caption {
     margin-top: 15px;
     text-align: center;
-    color: #a68ab7;
+    color: #ff157d;
     width: 100%;
 }
 
@@ -376,7 +376,7 @@ body.retro-theme pre code {
     display: block;
     font-size: 16px;
     margin-bottom: 8px;
-    color: #ddd;
+    color: #fff;
 }
 
 .blueprint-hint {
@@ -394,7 +394,7 @@ body.retro-theme pre code {
 .imageSlider-caption {
     margin-top: 103%;
     font-size: 14px;
-    color: #a68ab7;
+    color: #ff157d;
     text-align: center;
     font-style: italic;
 }
@@ -402,7 +402,7 @@ body.retro-theme pre code {
 .imageSlider-caption-1 {
     margin-top: 50%;
     font-size: 14px;
-    color: #a68ab7;
+    color: #ff157d;
     text-align: center;
     font-style: italic;
 }
@@ -468,7 +468,7 @@ body.retro-theme pre code {
 }
 
 .drag-indicator {
-    color: #ddd;
+    color: #fff;
     font-size: 16px;
     font-weight: bold;
     user-select: none;
@@ -476,7 +476,7 @@ body.retro-theme pre code {
 
 .copy-link {
     margin-left: 10px;
-    color: #a68ab7;
+    color: #ff157d;
     cursor: pointer;
     font-size: 18px;
     vertical-align: middle;
@@ -503,13 +503,13 @@ body.retro-theme pre code {
 }
 
 .copy-icon i {
-    color: #a68ab7; /* Match header color */
+    color: #ff157d; /* Match header color */
     font-size: 18px;
     cursor: pointer;
 }
 
 .copy-icon i:hover {
-    color: #7e5ba5; /* Change color on hover */
+    color: #ff4a8c; /* Change color on hover */
 }
 
 /* Retro theme (light mode) styling */

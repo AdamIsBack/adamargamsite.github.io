@@ -12,15 +12,15 @@ function calculateYears(startDate) {
     return years;
 }
 
-// Set birthdate to March 31, 2004
-const birthDate = '2004-03-31';
+// Set birthdate to May 23, 2006
+const birthDate = '2006-05-23';
 const ageElement = document.getElementById('age');
 if (ageElement) {
     ageElement.textContent = calculateYears(birthDate);
 }
 
-// Set experience start date to Otktober 10 2019
-const experienceStartDate = '2019-10-13';
+// Set experience start date to January 1, 2024
+const experienceStartDate = '2024-01-01';
 const experienceYears = calculateYears(experienceStartDate);
 const experienceElement = document.getElementById('experience');
 if (experienceElement) {

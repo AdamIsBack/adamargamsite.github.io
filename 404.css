@@ -1,8 +1,8 @@
 /* Custom 404 Page Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #1e1e2e; /* Dark background with a hint of purple */
-    color: #ddd; /* Light grey text for readability */
+    background-color: #1e1e2e; /* Dark background */
+    color: #fff; /* White text for readability */
     padding: 20px;
     text-align: center;
 }
@@ -11,7 +11,7 @@ body {
 }
 h1 {
     font-size: 100px;
-    color: #a68ab7; /* Light purple for header text */
+    color: #ff157d; /* Hot pink for header text */
     margin: 0;
 }
 p {
@@ -19,11 +19,11 @@ p {
     margin: 20px 0;
 }
 a {
-    color: #c092f5; /* Lighter blue for better visibility */
+    color: #ff6b9d; /* Light pink for better visibility */
     text-decoration: none;
 }
 a:hover {
-    color: #884eca; /* Even lighter blue on hover */
+    color: #ff0080; /* Bright pink on hover */
     text-decoration: underline;
 }
 .links {

@@ -3,7 +3,7 @@
     margin: 20px auto 0px;
     max-width: 800px;
     font-size: 18px;
-    color: #ccc;
+    color: #fff;
 }
 
 .features-section {
@@ -43,7 +43,7 @@
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-bottom: 2px solid #4c3a62;
+    border-bottom: 2px solid #a81350;
 }
 
 .feature-list li > div {
@@ -55,13 +55,13 @@
 
 .feature-list li h3 {
     font-size: 20px;
-    color: #a68ab7;
+    color: #ff157d;
     margin-bottom: 8px;
 }
 
 .feature-list li p {
     font-size: 16px;
-    color: #ddd;
+    color: #fff;
     line-height: 1.5;
 }
 
@@ -72,7 +72,7 @@
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background-color: #7e5ba5;
+    background-color: #ff4a8c;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -82,7 +82,7 @@
 }
 
 .feature-list li .feature-btn:hover {
-    background-color: #a68ab7;
+    background-color: #ff157d;
 }
 
 /* Retro theme styling */

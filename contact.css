@@ -13,7 +13,7 @@
 }
 
 .contact-list p {
-    color: #a68ab7; /* Same light purple as the header */
+    color: #ff157d; /* Pink text */
 }
 
 .contact-list li {
@@ -26,11 +26,11 @@
 
 .contact-list i {
     margin-right: 10px;
-    color: #a68ab7; /* Same light purple as the header */
+    color: #ff157d; /* Pink icon */
 }
 
 .contact-list a {
-    color: #a68ab7; /* Light purple for links */
+    color: #ff157d; /* Pink for links */
     text-decoration: none;
     margin-left: 5px;
 }
