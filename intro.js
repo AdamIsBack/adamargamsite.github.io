@@ -2,6 +2,18 @@
 const leftPanel = document.getElementById('left-panel');
 const rightPanel = document.getElementById('right-panel');
 const container = document.getElementById('split-container');
+const body = document.body;
+
+function navigateWithTransition(destination) {
+    if (body.classList.contains('page-transition-out')) {
+        return;
+    }
+
+    body.classList.add('page-transition-out');
+    window.setTimeout(() => {
+        window.location.href = destination;
+    }, 430);
+}
 
 function adjustPanels(x) {
     const width = window.innerWidth;
@@ -39,13 +51,27 @@ container.addEventListener('touchmove', e => {
 
 // Click handlers to navigate
 leftPanel.addEventListener('click', () => {
-    // placeholder for voice acting section
-    window.location.href = '/voice.html';
+    navigateWithTransition('/voice.html');
 });
 
 rightPanel.addEventListener('click', () => {
-    // navigate to the game design page
-    window.location.href = '/game.html';
+    navigateWithTransition('/game.html?from=intro');
+});
+
+document.querySelectorAll('a[href="/voice.html"]').forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        navigateWithTransition('/voice.html');
+    });
+});
+
+document.querySelectorAll('a[href="/game.html"]').forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        navigateWithTransition('/game.html?from=intro');
+    });
 });
 
 // initialize panels to centre
