@@ -1,30 +1,30 @@
 /* Under Construction Page Styles */
 .construction-container {
     text-align: center;
-    padding: 100px 20px;
+    padding: clamp(3rem, 15vw, 6rem) clamp(1rem, 3vw, 2rem);
 }
 
 .construction-container h1 {
-    font-size: 60px;
+    font-size: clamp(2.5rem, 10vw, 4rem);
     color: #ff157d; /* Pink header */
-    margin-bottom: 20px;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
 }
 
 .construction-container p {
-    font-size: 20px;
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
 }
 
 /* Progress bar style */
 .progress-bar {
-    width: 60%;
-    height: 30px;
+    width: clamp(60%, 80vw, 600px);
+    height: clamp(20px, 4vh, 35px);
     background-color: #ff157d;
-    border-radius: 15px;
-    margin: 0 auto 30px;
+    border-radius: clamp(10px, 2vw, 20px);
+    margin: 0 auto clamp(1.5rem, 3vw, 2rem);
     overflow: hidden;
-    border: 2px solid #a81350;
+    border: clamp(1px, 0.3vw, 3px) solid #a81350;
 }
 
 .progress-fill {
@@ -43,12 +43,13 @@
 
 /* Links styling */
 .links {
-    margin-top: 30px;
+    margin-top: clamp(1.5rem, 3vw, 2rem);
 }
 
 .links a {
     color: #ff6b9d;
     text-decoration: none;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
 }
 
 .links a:hover {

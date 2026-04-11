@@ -69,25 +69,25 @@ body {
 
 .page-title {
     position: absolute;
-    top: 24%;
+    top: 4%;
     left: 50%;
     isolation: isolate;
     margin: 0;
     display: block;
-    width: min(98vw, 640px);
+    width: 103.125%;
     text-align: center;
     font-family: 'Lexend', sans-serif;
     font-weight: 800;
     text-transform: uppercase;
-    font-size: clamp(1.2rem, 2.3vw, 2.2rem); /* title pill font size */
+    font-size: clamp(0.9rem, 1.725vw, 1.65rem);
     letter-spacing: 0.08em;
     color: var(--secondary-white);
-    text-shadow: 0 0 10px rgba(249, 20, 119, 0.65), 0 0 24px rgba(57, 0, 100, 0.55);
+    text-shadow: 0 0 clamp(8px, 1vw, 15px) rgba(249, 20, 119, 0.65), 0 0 clamp(16px, 2vw, 30px) rgba(57, 0, 100, 0.55);
     border: none;
-    padding: 0.65rem 1.75rem; /* title pill padding: top/bottom left/right */
-    z-index: 2;
+    padding: clamp(0.75rem, 1.875vw, 1.125rem) clamp(1.125rem, 2.25vw, 1.65rem);
+    z-index: 4;
     opacity: 0;
-    transform: translate(-50%, -22px); /* title entry start position (slides in from here) */
+    transform: translate(-50%, -22px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -112,16 +112,18 @@ body {
 
 .page-title-main {
     display: block;
-    font-size: clamp(1.55rem, 3.5vw, 2.75rem); /* big name font size: min, preferred, max */
+    font-size: clamp(1.74375rem, 3.9375vw, 3.09375rem); /* big name font size: min, preferred, max */
     line-height: 0.95;
+    white-space: nowrap;
 }
 
 .page-title-sub {
     display: block;
-    margin-top: 0.2rem;
-    font-size: clamp(0.76rem, 1.4vw, 1.2rem); /* subtitle font size: min, preferred, max */
+    margin-top: 0.3rem;
+    font-size: clamp(0.855rem, 1.575vw, 1.35rem); /* subtitle font size: min, preferred, max */
     line-height: 1.08;
     letter-spacing: 0.12em;
+    white-space: nowrap;
 }
 
 .star-stage {
@@ -134,10 +136,10 @@ body {
 
 .star-card {
     position: relative;
-    width: min(82vw, 810px, calc(56vh * 1.6)); /* star width: % of viewport, max px, or % of height */
-    aspect-ratio: 8 / 5; /* star width-to-height ratio — wider = more diamond-like */
+    width: clamp(540px, 58vw, 860px);
+    aspect-ratio: 8 / 5;
     opacity: 0;
-    transform: translateY(26vh) scale(0.62) rotate(-14deg); /* star entry start: vertical offset, scale, tilt */
+    transform: translateY(26vh) scale(0.62) rotate(-14deg);
     will-change: transform, opacity;
 }
 
@@ -177,39 +179,37 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: clamp(96px, 12vw, 152px);  /* icon size: min px, preferred vw, max px */
-    height: clamp(96px, 12vw, 152px); /* keep equal to width to stay circular */
+    width: clamp(80px, 30vmin, 160px);
+    height: clamp(80px, 30vmin, 160px);
     margin: 0;
     transform: translate(-50%, -50%);
     z-index: 3;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid var(--secondary-white); /* icon ring thickness */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+    border: clamp(3px, 0.5vw, 6px) solid var(--secondary-white);
+    box-shadow: 0 clamp(6px, 1vw, 12px) clamp(15px, 2vw, 30px) rgba(0, 0, 0, 0.55);
 }
 
 .summary-text {
-    /* ── POSITION ────────────────────────────────────────────────────── */
     position: absolute;
     top: 50%;
     left: 50%;
     isolation: isolate;
     z-index: 1;
-    margin: 0;             /* use margin-top to move down, negative to move up  */
+    margin: 0;
     transform: translate(-50%, -50%) scale(1);
     transform-origin: center center;
 
-    /* ── SIZE & SHAPE ────────────────────────────────────────────────── */
-    width: clamp(500px, 62vw, 760px); /* summary star width slightly reduced */
-    min-height: clamp(120px, 16vw, 190px);
-    padding: 1rem 1.4rem 1.8rem;  /* extra bottom padding keeps text clear of the point */
+    width: 70%;
     max-width: none;
+    height: auto;
+    min-height: 50%;
+    max-height: none;
+    padding: clamp(0.8rem, 1.2vw, 1rem);
 
-    /* ── TEXT ────────────────────────────────────────────────────────── */
     line-height: 1.2;
-    font-size: clamp(0.48rem, 0.64vw, 0.6rem); /* smaller text so it fits more neatly inside the scaled shape */
+    font-size: clamp(0.4rem, 0.6vw, 0.6rem);
 
-    /* ── COLOUR & BORDER ─────────────────────────────────────────────── */
     background: none;
     border: none;
 }
@@ -219,7 +219,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    clip-path: polygon(50% 0%, 72% 28%, 100% 50%, 72% 72%, 50% 100%, 28% 72%, 0% 50%, 28% 28%);
+    clip-path: polygon(50% 0%, 80% 20%, 100% 50%, 80% 80%, 50% 100%, 20% 80%, 0% 50%, 20% 20%);
     z-index: -1;
 }
 
@@ -236,111 +236,135 @@ body {
 
 .explore-btn {
     position: absolute;
-    top: 82%;
+    top: clamp(70%, 80vh, 85%);
     left: 50%;
     margin-top: 0;
-    min-width: 150px;
+    min-width: clamp(130px, 20vw, 180px);
     border: none;
     border-radius: 999px;
     background: linear-gradient(120deg, var(--secondary-white), #ffd7e8 34%, var(--primary));
     color: var(--secondary-black);
     font-family: 'Lexend', sans-serif;
     font-weight: 800;
-    font-size: 0.95rem;
+    font-size: clamp(0.8rem, 1.5vw, 1.1rem);
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    padding: 0.8rem 1.25rem;
+    padding: clamp(0.6rem, 1.2vw, 0.9rem) clamp(1rem, 1.8vw, 1.3rem);
     cursor: pointer;
     transform: translateX(-50%);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), 0 0 20px rgba(249, 20, 119, 0.55);
+    box-shadow: 0 clamp(8px, 1.5vw, 14px) clamp(18px, 3vw, 30px) rgba(0, 0, 0, 0.5), 0 0 clamp(15px, 2vw, 25px) rgba(249, 20, 119, 0.55);
     transition: transform 0.24s ease, box-shadow 0.24s ease, filter 0.24s ease;
 }
 
 .explore-btn:hover,
 .explore-btn:focus-visible {
-    transform: translateX(-50%) translateY(-3px) scale(1.04);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.56), 0 0 30px rgba(249, 20, 119, 0.85);
+    transform: translateX(-50%) translateY(clamp(-2px, -0.5vh, -4px)) scale(1.04);
+    box-shadow: 0 clamp(10px, 2vw, 16px) clamp(22px, 4vw, 35px) rgba(0, 0, 0, 0.56), 0 0 clamp(20px, 3vw, 35px) rgba(249, 20, 119, 0.85);
     filter: saturate(1.12);
     outline: none;
 }
 
 .fact-bubble {
     position: absolute;
-    /* ── MAIN THOUGHT CLOUD POSITION ─────────────────────────────────── */
-    top: -25%;   /* vertical: negative = higher above the star, positive = lower */
-    right: -60%; /* horizontal: more negative = further right off the star edge */
-    /* ── MAIN THOUGHT CLOUD SIZE ─────────────────────────────────────── */
-    width: clamp(240px, 27vw, 360px); /* cloud width: min px, preferred vw, max px */
-    min-height: 132px; /* minimum cloud height */
+    top: clamp(-20%, -25vh, -30%);
+    right: clamp(-50%, -60vw, -70%);
+    width: clamp(200px, 25vmin, 400px);
+    min-height: clamp(100px, 12vmin, 150px);
     border-radius: 48% 52% 46% 54% / 58% 62% 38% 42%;
-    border: 3px solid rgba(255, 255, 255, 0.82);
+    border: clamp(2px, 0.3vw, 4px) solid rgba(223, 246, 255, 0.95);
     background:
-        radial-gradient(circle at 20% 26%, rgba(255, 255, 255, 0.98) 0 30%, transparent 32%),
-        radial-gradient(circle at 42% 18%, rgba(255, 255, 255, 0.96) 0 24%, transparent 26%),
-        radial-gradient(circle at 66% 24%, rgba(255, 255, 255, 0.95) 0 30%, transparent 32%),
-        radial-gradient(circle at 84% 38%, rgba(255, 242, 249, 0.9) 0 20%, transparent 22%),
-        linear-gradient(165deg, rgba(255, 255, 255, 0.97), rgba(255, 225, 239, 0.96));
+        radial-gradient(circle at 20% 26%, rgba(255, 255, 255, 0.99) 0 28%, transparent 31%),
+        radial-gradient(circle at 42% 18%, rgba(238, 250, 255, 0.97) 0 24%, transparent 27%),
+        radial-gradient(circle at 66% 24%, rgba(229, 246, 255, 0.96) 0 30%, transparent 33%),
+        radial-gradient(circle at 84% 38%, rgba(255, 233, 245, 0.92) 0 20%, transparent 23%),
+        linear-gradient(165deg, rgba(255, 255, 255, 0.99), rgba(224, 244, 255, 0.97));
     color: var(--primary);
     display: grid;
     place-items: center;
     text-align: center;
-    padding: 1rem 1.3rem;
+    padding: clamp(0.8rem, 1.5vw, 1.3rem);
     transform: rotate(-7deg) scale(0.3);
     transform-origin: left bottom;
     opacity: 0;
-    box-shadow: 0 12px 20px rgba(1, 0, 0, 0.38),
-        inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+    z-index: 6;
+    box-shadow: 0 clamp(10px, 1.5vw, 18px) clamp(15px, 2vw, 25px) rgba(1, 0, 0, 0.45),
+        0 0 clamp(8px, 1vw, 14px) rgba(140, 215, 255, 0.35),
+        inset 0 0 0 clamp(1px, 0.2vw, 3px) rgba(255, 255, 255, 0.55);
 }
 
-/* Thought trail dots — 4 real elements, arcing from icon toward the cloud */
+/* Thought trail dots — 6 real elements, arcing from icon toward the cloud */
 .bubble-dot {
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 1) 0%, rgba(255, 220, 240, 0.92) 100%);
-    border: 2.5px solid rgba(255, 255, 255, 0.88);
-    box-shadow: 0 3px 10px rgba(249, 20, 119, 0.22), inset 0 1px 3px rgba(255,255,255,0.6);
+    z-index: 7;
+    background: radial-gradient(circle at 30% 28%, rgba(255, 255, 255, 1) 0%, rgba(234, 248, 255, 0.98) 60%, rgba(187, 229, 255, 0.94) 100%);
+    border: clamp(2px, 0.35vw, 4px) solid rgba(232, 250, 255, 1);
+    box-shadow: 0 clamp(4px, 0.7vw, 9px) clamp(10px, 1.5vw, 16px) rgba(7, 5, 28, 0.48), 0 0 clamp(8px, 1vw, 14px) rgba(142, 219, 255, 0.5), inset 0 clamp(1px, 0.15vw, 2px) clamp(3px, 0.4vw, 5px) rgba(255,255,255,0.8);
+    filter: drop-shadow(0 clamp(2px, 0.35vw, 5px) clamp(4px, 0.7vw, 8px) rgba(8, 2, 24, 0.65));
     animation: dot-float 2.8s ease-in-out infinite;
 }
 
-/* 4th dot — smallest, farthest from cloud (near the icon) */
-.bubble-dot--4 {
-    width: 12px;   /* size: increase to make dot bigger */
-    height: 12px;  /* keep equal to width */
-    left: -236px;  /* horizontal position: more negative = farther left from cloud */
-    bottom: -88px; /* vertical position: higher number = higher up */
+/* 6th dot — smallest, farthest from cloud (near the icon) */
+.bubble-dot--6 {
+    width: clamp(7px, 0.8vmin, 12px);
+    height: clamp(7px, 0.8vmin, 12px);
+    left: -126%;
+    bottom: -112%;
     animation-delay: 0s;
+    animation-duration: 2.45s;
+    opacity: 0.7;
+}
+
+/* 5th dot */
+.bubble-dot--5 {
+    width: clamp(9px, 1vmin, 15px);
+    height: clamp(9px, 1vmin, 15px);
+    left: -98%;
+    bottom: -88%;
+    animation-delay: 0.1s;
     animation-duration: 2.6s;
     opacity: 0.78;
 }
 
+/* 4th dot */
+.bubble-dot--4 {
+    width: clamp(10px, 1.1vmin, 16px);
+    height: clamp(10px, 1.1vmin, 16px);
+    left: -76%;
+    bottom: -64%;
+    animation-delay: 0.2s;
+    animation-duration: 2.8s;
+    opacity: 0.84;
+}
+
 /* 3rd dot */
 .bubble-dot--3 {
-    width: 17px;   /* size: increase to make dot bigger */
-    height: 17px;  /* keep equal to width */
-    left: -190px;  /* horizontal position */
-    bottom: -56px; /* vertical position */
-    animation-delay: 0.2s;
+    width: clamp(14px, 1.6vmin, 22px);
+    height: clamp(14px, 1.6vmin, 22px);
+    left: -56%;
+    bottom: -42%;
+    animation-delay: 0.35s;
     animation-duration: 2.9s;
-    opacity: 0.86;
+    opacity: 0.9;
 }
 
 /* 2nd dot */
 .bubble-dot--2 {
-    width: 24px;   /* size: increase to make dot bigger */
-    height: 24px;  /* keep equal to width */
-    left: -146px;  /* horizontal position */
-    bottom: -20px; /* vertical position */
-    animation-delay: 0.4s;
+    width: clamp(18px, 2.1vmin, 30px);
+    height: clamp(18px, 2.1vmin, 30px);
+    left: -38%;
+    bottom: -22%;
+    animation-delay: 0.5s;
     animation-duration: 3.1s;
-    opacity: 0.92;
+    opacity: 0.96;
 }
 
 /* 1st dot — largest, closest to the main cloud */
 .bubble-dot--1 {
-    width: 33px;   /* size: increase to make dot bigger */
-    height: 33px;  /* keep equal to width */
-    left: -96px;   /* horizontal position */
-    bottom: 10px;  /* vertical position */
+    width: clamp(26px, 3.1vmin, 40px);
+    height: clamp(26px, 3.1vmin, 40px);
+    left: -22%;
+    bottom: -2%;
     animation-delay: 0.6s;
     animation-duration: 3.4s;
     opacity: 1;
@@ -484,93 +508,6 @@ body.to-portfolio .star-card {
     }
     to {
         filter: blur(0);
-    }
-}
-
-/* ── TABLET (≤ 860px) ───────────────────────────────────────────────────── */
-@media (max-width: 860px) {
-    .hero-shell {
-        padding: 0.8rem;
-    }
-
-    .page-title {
-        top: 23%;
-    }
-
-    .star-card {
-        width: min(90vw, calc(52vh * 1.6)); /* star size on tablet */
-        aspect-ratio: 8 / 5;
-    }
-
-    .profile-icon {
-        top: 50%;
-    }
-
-    .summary-text {
-        top: 50%;
-        max-width: none;
-        font-size: clamp(0.58rem, 1.2vw, 0.7rem); /* summary text size on tablet */
-    }
-
-    .explore-btn {
-        top: 84%;
-    }
-
-    .explore-btn {
-        min-width: 130px;
-        padding: 0.68rem 1.05rem;
-        font-size: 0.8rem;
-    }
-
-    .fact-bubble {
-        right: -7%;
-        top: 20%;
-        width: clamp(140px, 30vw, 210px);
-        min-height: 88px;
-    }
-}
-
-/* ── MOBILE (≤ 560px) ───────────────────────────────────────────────────── */
-@media (max-width: 560px) {
-    .page-title {
-        top: 22%;
-        width: 95%;
-        margin-bottom: 0;
-    }
-
-    .star-card {
-        width: min(96vw, calc(46vh * 1.6)); /* star size on mobile */
-        aspect-ratio: 8 / 5;
-    }
-
-    .profile-icon {
-        top: 50%;
-        width: 110px;  /* icon size on mobile */
-        height: 110px;
-    }
-
-    .summary-text {
-        top: 50%;
-        padding: 0.6rem 0.7rem; /* summary bubble padding on mobile */
-        line-height: 1.2;
-        font-size: 0.56rem;     /* summary text size on mobile */
-        max-width: none;
-    }
-
-    .explore-btn {
-        top: 85%;
-    }
-
-    .fact-bubble {
-        top: 18%;
-        right: -4%;
-        width: 132px;
-        min-height: 72px;
-        padding: 0.5rem;
-    }
-
-    .fact-text {
-        font-size: 0.66rem;
     }
 }
 

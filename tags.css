@@ -5,14 +5,14 @@
     display: flex;
     align-items: center; /* Align items vertically centered */
     justify-content: center; /* Center content horizontally */
-    margin-bottom: 20px;
-    gap: 10px; /* Space between the label and the dropdown */
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    gap: clamp(0.5rem, 1.5vw, 1rem); /* Space between the label and the dropdown */
 }
 
 .filter label {
-    font-size: 32\px;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     color: #ff157d; /* Pink text to match dark theme */
-    margin-right: 10px; /* Space between the label and the dropdown */
+    margin-right: clamp(0.5rem, 1vw, 0.8rem); /* Space between the label and the dropdown */
     font-weight: bold; /* Make the label stand out */
 }
 
@@ -23,17 +23,17 @@ body.retro-theme .filter label {
 
 /* Styling for the tags */
 .tags {
-    margin-top: 13px;
+    margin-top: clamp(0.8rem, 1.5vw, 1rem);
 }
 
 /* Base styling for all tags */
 .tag {
     display: inline-block;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    padding: clamp(0.3rem, 0.8vw, 0.5rem) clamp(0.6rem, 1.2vw, 0.8rem);
+    border-radius: clamp(15px, 2vw, 25px);
+    font-size: clamp(0.7rem, 1.2vw, 0.95rem);
+    margin-right: clamp(0.3rem, 0.8vw, 0.5rem);
+    margin-bottom: clamp(0.3rem, 0.8vw, 0.5rem);
     transition: background-color 0.3s ease;
     color: #fff; /* White text for contrast */
     background-color: #4d4d4d;

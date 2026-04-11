@@ -2,9 +2,9 @@
 .navbar {
     background-color: #ff157d;
     color: var(--brand-surface-text);
-    padding: 10px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 30px;
+    padding: clamp(0.5rem, 1.5vh, 0.8rem) clamp(1rem, 3vw, 2rem);
+    box-shadow: 0 clamp(2px, 0.5vw, 6px) clamp(4px, 1vw, 12px) rgba(0, 0, 0, 0.2);
+    margin-bottom: clamp(1.5rem, 5vw, 2rem);
     transition: background-color 0.3s ease;
 }
 
@@ -13,7 +13,7 @@
     list-style-type: none;
     display: flex;
     justify-content: center; /* Center all the navigation items */
-    gap: 30px; /* Space between links */
+    gap: clamp(1.5rem, 3vw, 2.5rem); /* Space between links */
     align-items: center; /* Vertically center links */
 }
 
@@ -26,10 +26,10 @@
     color: #1e1e2e;
     background: #ff157d;
     border: 1px solid rgba(0,0,0,0.15);
-    padding: 8px 12px;
-    font-size: 18px;
-    border-radius: 6px;
-    min-width: 44px;
+    padding: clamp(0.4rem, 1vh, 0.7rem) clamp(0.7rem, 1.5vw, 1rem);
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    border-radius: clamp(0.3rem, 0.5vw, 0.5rem);
+    min-width: clamp(40px, 6vw, 50px);
     text-align: center;
 }
 .nav-links .theme-toggle:hover {
@@ -50,7 +50,7 @@ body.retro-theme .nav-links .theme-toggle {
 .nav-links a {
     text-decoration: none;
     color: var(--brand-surface-text);
-    font-size: 22px;
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
     font-weight: bold;
     transition: color 0.3s ease;
     text-align: center; /* Keep text center-aligned */
@@ -85,9 +85,9 @@ body.retro-theme .nav-links a {
     left: 50%;
     transform: translateX(-50%); /* Horizontally center the dropdown */
     background-color: #ff157d;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    padding: 10px 0;
-    min-width: 275px;
+    box-shadow: 0 clamp(4px, 1vw, 12px) clamp(8px, 2vw, 20px) rgba(0, 0, 0, 0.3);
+    padding: clamp(0.5rem, 1vh, 0.8rem) 0;
+    min-width: clamp(200px, 40vw, 350px);
     z-index: 1;
     transition: background-color 0.3s ease;
 }
@@ -95,7 +95,7 @@ body.retro-theme .nav-links a {
 /* Individual dropdown links */
 .dropdown-content li {
     display: block;
-    padding: 10px 20px;
+    padding: clamp(0.5rem, 1vh, 0.8rem) clamp(1rem, 2vw, 1.5rem);
 }
 
 .dropdown-content li a {

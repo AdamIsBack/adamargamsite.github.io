@@ -3,20 +3,20 @@ body {
     font-family: Arial, sans-serif;
     background-color: #1e1e2e; /* Dark background */
     color: #fff; /* White text for readability */
-    padding: 20px;
+    padding: clamp(1rem, 3vw, 2rem);
     text-align: center;
 }
 .container {
-    padding: 50px;
+    padding: clamp(2rem, 8vw, 3.5rem);
 }
 h1 {
-    font-size: 100px;
+    font-size: clamp(3rem, 15vw, 6rem);
     color: #ff157d; /* Hot pink for header text */
     margin: 0;
 }
 p {
-    font-size: 18px;
-    margin: 20px 0;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    margin: clamp(1rem, 2vw, 1.5rem) 0;
 }
 a {
     color: #ff6b9d; /* Light pink for better visibility */

@@ -1,6 +1,11 @@
 /* base.css */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
 
+:root {
+    /* Responsive font sizing - scales with viewport */
+    font-size: clamp(12px, 2vw, 20px);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +15,7 @@
 body {
     font-family: 'Lexend', Arial, sans-serif;
     color: #fff;
-    padding: 20px;
+    padding: clamp(1rem, 5vw, 2rem);
     background:
         linear-gradient(to right, rgba(255, 107, 157, 0.12) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 107, 157, 0.12) 1px, transparent 1px);
@@ -23,20 +28,20 @@ body {
 /* Adjust header for dark mode */
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: clamp(1rem, 5vw, 2rem);
 }
 
 /* Theme toggle button */
 .theme-toggle {
-    margin-left: 12px;
-    padding: 6px 10px;
-    border-radius: 6px;
+    margin-left: clamp(0.5rem, 2vw, 1rem);
+    padding: clamp(0.3rem, 1vw, 0.7rem) clamp(0.5rem, 1.5vw, 0.8rem);
+    border-radius: clamp(0.3rem, 1vw, 0.5rem);
     border: 1px solid #777;
     background: transparent;
     color: inherit;
     cursor: pointer;
     font-weight: bold;
-    font-size: 14px;
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
 }
 .theme-toggle:hover {
     background: rgba(255,255,255,0.03);
@@ -49,7 +54,7 @@ body.retro-theme .theme-toggle {
 }
 
 h1 {
-    font-size: 36px; 
+    font-size: clamp(1.5rem, 6vw, 3rem);
     color: #ff157d;
 }
 
@@ -62,16 +67,16 @@ h1 {
 
 footer {
     text-align: center;
-    margin-top: 50px;
-    font-size: 14px;
+    margin-top: clamp(2rem, 10vw, 4rem);
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
     color: #fff;
 }
 
 footer a {
     text-decoration: none;
-    font-size: 20px;
-    margin-right: 10px;
-    margin-bottom: 5px;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-right: clamp(0.5rem, 2vw, 1rem);
+    margin-bottom: clamp(0.3rem, 1vw, 0.5rem);
     color: #fff;
 }
 
@@ -86,7 +91,7 @@ body.retro-theme .filter label {
 
 footer p{
     text-align: center;
-    font-size: 14px;
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
     color: #fff;
 }
 
@@ -96,9 +101,9 @@ footer p{
 
 .intro-text {
     text-align: center;
-    margin: 20px auto 50px;
-    max-width: 800px;
-    font-size: 18px;
+    margin: clamp(1rem, 3vw, 2rem) auto clamp(2rem, 8vw, 3rem);
+    max-width: 90%;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     color: #fff;
 }
 
@@ -110,17 +115,17 @@ hr {
     margin: 0;
     opacity: 1;
     background: linear-gradient(to right, #ff157d, #a81350);
-    height: 3px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-    margin: 30px 0;
+    height: clamp(2px, 0.5vw, 4px);
+    border-radius: clamp(0.3rem, 1vw, 0.5rem);
+    box-shadow: 0px clamp(1px, 0.3vw, 3px) clamp(3px, 1vw, 8px) rgba(0, 0, 0, 0.3);
+    margin: clamp(1.5rem, 5vw, 2rem) 0;
 }
 
 /* Styling for inline code blocks inside backticks */
 highlight-text {
     background-color: #2d2d2d;
-    padding: 2px 6px;
-    border-radius: 4px;
+    padding: clamp(0.1rem, 0.5vw, 0.3rem) clamp(0.3rem, 1vw, 0.5rem);
+    border-radius: clamp(0.2rem, 0.5vw, 0.3rem);
     font-family: monospace;
     font-weight: bold;
     color: white;
@@ -146,15 +151,15 @@ custom-tooltip .tooltip-box {
     transform: translateX(-50%);
     background-color: #a81350;
     color: #fff;
-    padding: 5px 10px;
-    border-radius: 4px;
+    padding: clamp(0.3rem, 1vw, 0.7rem) clamp(0.5rem, 1.5vw, 0.8rem);
+    border-radius: clamp(0.2rem, 0.5vw, 0.3rem);
     white-space: normal;
-    font-size: 14px;
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
     z-index: 10;
     opacity: 0;
     transition: opacity 0.2s;
-    max-width: 300px;
-    min-width: 300px;
+    max-width: 90vw;
+    min-width: clamp(200px, 80vw, 300px);
 }
 
 custom-tooltip .tooltip-box::after {

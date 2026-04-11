@@ -3,13 +3,13 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px; /* Adds some space between the sections */
+    gap: clamp(1rem, 2vw, 2rem); /* Adds some space between the sections */
 }
 
 /* Ensure both columns take up equal width and are responsive */
 .horizontal-section > div {
     flex: 1; /* Each section takes up equal space */
-    min-width: 300px; /* Set a minimum width to ensure responsiveness */
+    min-width: clamp(250px, 80vw, 400px); /* Set a minimum width to ensure responsiveness */
 }
 
 /* User Tests Flexbox */
@@ -17,21 +17,21 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: clamp(1rem, 2vw, 2rem);
 }
 
 .user-tests-flex .user-test {
     flex: 1;
-    min-width: 300px; /* Ensures responsive design for smaller screens */
+    min-width: clamp(250px, 80vw, 400px); /* Ensures responsive design for smaller screens */
 }
 
 /* Styling for general elements (as in your current CSS) */
 #playtesting {
-    max-width: 70%;
-    margin: 30px auto;
-    padding: 40px 20px;
+    max-width: 90%;
+    margin: clamp(1.5rem, 3vw, 2rem) auto;
+    padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 2vw, 1.5rem);
     background-color: #ff157d;
-    border-radius: 12px;
+    border-radius: clamp(0.8rem, 1.5vw, 1rem);
     color: var(--brand-surface-text);
 }
 
