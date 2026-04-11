@@ -19,7 +19,13 @@
     <link rel="stylesheet" href="game.css">
 </head>
 <body>
-    <video class="background-video" autoplay muted loop playsinline>
+    <a class="back-home" href="/index.html" aria-label="Go back to intro page">
+        <span class="back-home-star">
+            <span class="back-home-text">GO BACK</span>
+        </span>
+    </a>
+
+    <video class="background-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
         <source src="Videos/VideoGameReel50MB.mp4" type="video/mp4">
     </video>
     <div class="video-overlay" aria-hidden="true"></div>
@@ -27,6 +33,15 @@
 
     <main class="hero-shell">
         <section class="star-stage" aria-label="Profile introduction">
+            <svg class="triangle-burst" viewBox="0 0 1000 700" aria-hidden="true">
+                <polygon points="287,315 160,135 463,221"></polygon>
+                <polygon points="713,315 840,135 537,221"></polygon>
+                <polygon points="688,355 775,460 580,400"></polygon>
+                <polygon points="312,355 225,460 420,400"></polygon>
+                <polygon points="643,405 664,540 545,440"></polygon>
+                <polygon points="357,405 336,540 455,440"></polygon>
+            </svg>
+
             <article id="star-card" class="star-card">
                 <h1 class="page-title">
                     <span class="page-title-main">Adam Argam</span>
@@ -39,7 +54,7 @@
                 </svg>
 
                 <div class="star-content">
-                    <img class="profile-icon" src="MijnFoto.jpg" alt="Portrait of Adam Argam">
+                    <img class="profile-icon" src="MijnFoto.jpg" alt="Portrait of Adam Argam" loading="eager" decoding="async" fetchpriority="high">
                     <p class="summary-text"></p>
                     <button id="explore-btn" class="explore-btn" type="button">Explore</button>
                 </div>
