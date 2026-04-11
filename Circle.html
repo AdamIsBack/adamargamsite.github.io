@@ -1,124 +1,62 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Donut Chart with Tags</title>
-  <style>
-    body {
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: sans-serif;
-    }
-
-    svg {
-      width: 500px;
-      height: 500px;
-    }
-
-    .label {
-      font-size: 12px;
-      fill: white;
-      text-anchor: middle;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Removed</title>
+    <style>
+        :root {
+            --bg: #010000;
+            --primary: #f91477;
+            --accent: #390064;
+            --text: #ffffff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background: radial-gradient(circle at 20% 20%, rgba(249, 20, 119, 0.2), transparent 40%),
+                        radial-gradient(circle at 80% 75%, rgba(57, 0, 100, 0.35), transparent 45%),
+                        var(--bg);
+            padding: 24px;
+        }
+        main {
+            width: min(680px, 92vw);
+            border: 2px solid rgba(255,255,255,0.9);
+            border-radius: 18px;
+            background: linear-gradient(150deg, rgba(57,0,100,0.72), rgba(20,0,40,0.78));
+            padding: 28px;
+            text-align: center;
+            box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+        }
+        h1 {
+            margin: 0 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--primary);
+        }
+        p { margin: 0 0 18px; line-height: 1.5; }
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--text);
+            border: 2px solid #fff;
+            border-radius: 999px;
+            padding: 10px 16px;
+            font-weight: 700;
+            background: rgba(249,20,119,0.75);
+        }
+    </style>
 </head>
 <body>
-
-<svg id="donutChart" viewBox="0 0 500 500"></svg>
-
-<script>
-  const data = [
-    { tag: "Unity", value: 10 },
-    { tag: "C#", value: 15 },
-    { tag: "C++", value: 20 },
-    { tag: "Design", value: 18 },
-    { tag: "Art", value: 12 },
-    { tag: "Systems", value: 8 },
-    { tag: "Gameplay", value: 5 },
-    { tag: "AI", value: 7 },
-    { tag: "Tool", value: 3 },
-    { tag: "VFX", value: 2 }
-  ];
-
-  const svg = document.getElementById('donutChart');
-  const centerX = 250;
-  const centerY = 250;
-  const outerRadius = 150;
-  const innerRadius = 110;
-  const gapAngle = 2; // degrees between slices
-
-  let cumulativeAngle = 0;
-
-  function polarToCartesian(cx, cy, r, angleDeg) {
-    const angleRad = (angleDeg - 90) * Math.PI / 180.0;
-    return {
-      x: cx + r * Math.cos(angleRad),
-      y: cy + r * Math.sin(angleRad)
-    };
-  }
-
-  function describeDonutArc(x, y, rOuter, rInner, startAngle, endAngle) {
-    const startOuter = polarToCartesian(x, y, rOuter, startAngle);
-    const endOuter = polarToCartesian(x, y, rOuter, endAngle);
-    const startInner = polarToCartesian(x, y, rInner, endAngle);
-    const endInner = polarToCartesian(x, y, rInner, startAngle);
-
-    const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
-
-    return [
-      "M", startOuter.x, startOuter.y,
-      "A", rOuter, rOuter, 0, largeArcFlag, 1, endOuter.x, endOuter.y,
-      "L", startInner.x, startInner.y,
-      "A", rInner, rInner, 0, largeArcFlag, 0, endInner.x, endInner.y,
-      "Z"
-    ].join(" ");
-  }
-
-  data.sort((a, b) => b.value - a.value);
-
-  data.forEach(d => {
-    const sliceAngle = (d.value / 100) * 360 - gapAngle;
-    const startAngle = cumulativeAngle;
-    const endAngle = cumulativeAngle + sliceAngle;
-
-    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.setAttribute("d", describeDonutArc(centerX, centerY, outerRadius, innerRadius, startAngle, endAngle));
-    path.setAttribute("fill", `hsl(${Math.random() * 360}, 70%, 60%)`);
-    svg.appendChild(path);
-
-    // Label
-    const midAngle = startAngle + sliceAngle / 2;
-    const labelPos = polarToCartesian(centerX, centerY, outerRadius + 20, midAngle);
-
-    const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    let adjustedX = labelPos.x;
-
-    let horizontallyMargin = 40;
-
-    // Shift labels horizontally only
-    if (midAngle % 360 && midAngle % 360 < 180) {
-        // Left side
-        adjustedX += horizontallyMargin;
-        label.setAttribute("text-anchor", "end");
-    } else {
-        // Right side
-        adjustedX -= horizontallyMargin;
-        label.setAttribute("text-anchor", "start");
-    }
-
-    label.setAttribute("x", adjustedX);
-    label.setAttribute("y", labelPos.y);
-    label.setAttribute("class", "label");
-    label.textContent = `${d.tag} (${d.value}%)`;
-    svg.appendChild(label);
-
-    cumulativeAngle += sliceAngle + gapAngle;
-  });
-</script>
-
+    <main>
+        <h1>Page Removed</h1>
+        <p>This page has been cleared from the current site structure.</p>
+        <a href="/Project.html">Go to Explore</a>
+    </main>
 </body>
 </html>

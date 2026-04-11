@@ -1,65 +1,62 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="Covers/TimeIsNowLogo.png">
-    
-    <meta name="description" content="Bas de Reus - Game Developer, showcasing projects and skills in game development.">
-    <meta name="keywords" content="Bas de Reus, Game Developer, Unity, C#, C++, HTML/CSS/JS">
-    <meta name="author" content="Bas de Reus">
-
-    <title>Under Construction</title>
-
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="underconstruction.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Page Removed</title>
+    <style>
+        :root {
+            --bg: #010000;
+            --primary: #f91477;
+            --accent: #390064;
+            --text: #ffffff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background: radial-gradient(circle at 20% 20%, rgba(249, 20, 119, 0.2), transparent 40%),
+                        radial-gradient(circle at 80% 75%, rgba(57, 0, 100, 0.35), transparent 45%),
+                        var(--bg);
+            padding: 24px;
+        }
+        main {
+            width: min(680px, 92vw);
+            border: 2px solid rgba(255,255,255,0.9);
+            border-radius: 18px;
+            background: linear-gradient(150deg, rgba(57,0,100,0.72), rgba(20,0,40,0.78));
+            padding: 28px;
+            text-align: center;
+            box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+        }
+        h1 {
+            margin: 0 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--primary);
+        }
+        p { margin: 0 0 18px; line-height: 1.5; }
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--text);
+            border: 2px solid #fff;
+            border-radius: 999px;
+            padding: 10px 16px;
+            font-weight: 700;
+            background: rgba(249,20,119,0.75);
+        }
+    </style>
 </head>
 <body>
-    <div id="navbar-placeholder"></div>
-
-    <div class="construction-container">
-        <h1>🚧 Under Construction 🚧</h1>
-        <p>Sorry for the inconvenience, but this page is currently being built. Please check back later!</p>
-        <div class="progress-bar">
-            <div class="progress-fill"></div>
-        </div>
-        <div class="links">
-            <p>Meanwhile, you can visit:</p>
-            <a href="/">Home</a> |
-            <a href="/about">About Me</a> |
-            <a href="/contact">Contact</a> |
-            <a href="/Miscellaneous">Miscellaneous</a> |
-            <a href="/features">Features</a>
-            
-            <div id="github-link-container" style="margin-top: 20px; display: none;">
-                <p>Or check out this project on GitHub:</p>
-                <a id="github-link" href="#" target="_blank" style="font-weight: bold;">View on GitHub</a>
-            </div>
-            
-            <!-- <br><br><br>
-            <p>The project could be found on the old version:</p>
-            <a href="https://www.bas-de-reus.nl/Old/All-Projects#new">Old website</a> -->
-        </div>
-    </div>
-
-    <div id="footer-placeholder"></div>
-
-    <script src="ProjectsData.js"></script>
-    <script src="theme-toggle.js"></script>
-    <script src="HtmlFetcher.js"></script>
-    <script>
-        // Read github parameter from URL
-        const params = new URLSearchParams(window.location.search);
-        const gitHubUrl = params.get('github');
-        
-        if (gitHubUrl) {
-            const githubContainer = document.getElementById('github-link-container');
-            const githubLink = document.getElementById('github-link');
-            githubLink.href = gitHubUrl;
-            githubContainer.style.display = 'block';
-        }
-    </script>
+    <main>
+        <h1>Page Removed</h1>
+        <p>This page has been cleared from the current site structure.</p>
+        <a href="/Project.html">Go to Explore</a>
+    </main>
 </body>
 </html>
