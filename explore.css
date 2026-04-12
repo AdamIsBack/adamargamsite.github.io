@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap');
 
 :root {
     --line: rgba(255, 255, 255, 0.98);
@@ -21,7 +21,7 @@ body {
 }
 
 body {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Lexend', sans-serif;
     color: var(--ink);
     background:
         radial-gradient(circle at 10% 16%, rgba(255, 110, 72, 0.24), transparent 30%),
@@ -138,7 +138,8 @@ body::before {
     top: var(--ty, 50%);
     transform: translate(-50%, -50%);
     margin: 0;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.07em;
     line-height: 0.95;
@@ -146,7 +147,10 @@ body::before {
     font-size: clamp(1.1rem, 3vw, 3.3rem);
     color: rgba(247, 245, 240, 0.93);
     text-shadow: 0 3px 16px rgba(0, 0, 0, 0.75);
-    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.4s ease;
+    background: rgba(255, 21, 125, 0.4);
+    padding: clamp(0.2rem, 0.8vw, 0.5rem) clamp(0.4rem, 1.2vw, 0.9rem);
+    border-radius: clamp(6px, 1.2vw, 14px);
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.4s ease, background 0.25s ease, box-shadow 0.25s ease;
     z-index: 13;
     pointer-events: none;
 }
@@ -169,19 +173,36 @@ body::before {
 .shard:focus-visible .shard-title {
     color: #fff8d8;
     text-shadow: 0 0 8px rgba(249, 20, 119, 0.75), 0 0 22px rgba(249, 20, 119, 0.9), 0 0 50px rgba(249, 20, 119, 0.55);
+    background: rgba(255, 21, 125, 0.55);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.75);
     transform: translate(-50%, -50%) scale(1.07);
 }
 
-.shard-back { --poly: 0% 0%, 24% 0%, 0% 17%; --tx: 8%; --ty: 8%; --media-x: 8%; --media-y: 8%; }
-.shard-voice { --poly: 0% 17%, 24% 0%, 12% 72%, 0% 100%; --tx: 8%; --ty: 31%; --media-x: -26%; --media-y: 31%; --media-shift-x: -41%; }
-.shard-about { --poly: 24% 0%, 49% 0%, 33% 46%, 12% 72%; --tx: 30%; --ty: 21%; --media-x: 30%; --media-y: 21%; }
-.shard-side { --poly: 49% 0%, 100% 0%, 64% 35%; --tx: 72%; --ty: 15%; --media-x: 72%; --media-y: 15%; }
+.shard-back { --poly: 0% 0%, 24% 0%, 0% 17%; --tx: 6%; --ty: 6%; --media-x: 8%; --media-y: 8%; }
+.shard-voice { --poly: 0% 17%, 24% 0%, 12% 72%, 0% 100%; --tx: 10%; --ty: 21%; --media-x: -26%; --media-y: 31%; --media-shift-x: -41%; }
+.shard-voice .shard-title { font-size: clamp(0.99rem, 2.7vw, 2.97rem); }
+.shard-about {
+    --poly: 24% 0%, 49% 0%, 33% 46%, 12% 72%;
+    --tx: 31%;
+    --ty: 21%;
+    --media-x: 20%;
+    --media-y: 50%;
+    --media-shift-x: -6%;
+    --media-shift-y: -10%;
+    --media-rotate: 10deg;
+    --media-hover-rotate: 5deg;
+    --media-hover-scale: 0.85;
+    --media-size: contain;
+    --media-scale: 0.85;
+}
+.shard-about .shard-media { background-repeat: no-repeat; }
+.shard-about .shard-title { font-size: clamp(1.375rem, 3.75vw, 4.125rem); }
+.shard-side { --poly: 49% 0%, 100% 0%, 64% 35%; --tx: 70%; --ty: 10%; --media-x: 72%; --media-y: 15%; }
 .shard-art {
     --poly: 64% 35%, 100% 0%, 100% 48%;
 
-    /* Quick controls: edit these values to position/size your Art tile fast */
-    --tx: 82%;               /* title horizontal position */
-    --ty: 35%;               /* title vertical position */
+    --tx: 87%;               /* title horizontal position */
+    --ty: 28%;               /* title vertical position */
     --media-x: 82%;          /* image horizontal anchor */
     --media-y: 35%;          /* image vertical anchor */
     --media-size: cover;     /* examples: cover, contain, 60% 60% */
@@ -196,10 +217,12 @@ body::before {
     background-image: url('Covers/FinLaLune.png');
     background-repeat: no-repeat;
 }
-.shard-games { --poly: 33% 46%, 49% 0%, 64% 35%, 51% 84%, 47% 100%; --tx: 49%; --ty: 47%; --media-x: 49%; --media-y: 47%; }
-.shard-contact { --poly: 64% 35%, 100% 48%, 100% 100%, 51% 84%; --tx: 77%; --ty: 74%; --media-x: 50%; --media-y: 50%; --media-shift-x: 30%; --media-shift-y: 16%; --media-scale: 1.0; --media-hover-scale: 1.06; --media-size: contain; --media-rotate: 0deg; --media-hover-rotate: 10deg; }
-.shard-time { --poly: 0% 100%, 12% 72%, 33% 46%, 47% 100%; --tx: 20%; --ty: 84%; --media-x: 22%; --media-y: 100%; --media-size: 27% 45%; --media-scale: 1; --media-hover-scale: 1.04; }
+.shard-art .shard-title { font-size: clamp(1.375rem, 3.75vw, 4.125rem); }
+.shard-games { --poly: 33% 46%, 49% 0%, 64% 35%, 51% 84%, 47% 100%; --tx: 48.2%; --ty: 43%; --media-x: 49%; --media-y: 47%; }
+.shard-games .shard-title { font-size: clamp(1.705rem, 4.65vw, 5.115rem); }
+.shard-contact { --poly: 64% 35%, 100% 48%, 100% 100%, 51% 84%; --tx: 77%; --ty: 68%; --media-x: 50%; --media-y: 50%; --media-shift-x: 30%; --media-shift-y: 16%; --media-scale: 1.0; --media-hover-scale: 1.06; --media-size: contain; --media-rotate: 0deg; --media-hover-rotate: 10deg; }.shard-contact .shard-title { font-size: clamp(1.375rem, 3.75vw, 4.125rem); }.shard-time { --poly: 0% 100%, 12% 72%, 33% 46%, 47% 100%; --tx: 25%; --ty: 84%; --media-x: 22%; --media-y: 100%; --media-size: 27% 45%; --media-scale: 1; --media-hover-scale: 1.04; }
 .shard-time .shard-media { background-color: #f91477; background-repeat: no-repeat; }
+.shard-time .shard-title { font-size: clamp(1.65rem, 4.5vw, 4.95rem); }
 .shard-resume { --poly: 51% 84%, 100% 100%, 47% 100%; --tx: 67%; --ty: 95%; --media-x: 67%; --media-y: 95%; }
 
 body.ready .shard {
