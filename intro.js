@@ -74,26 +74,26 @@ container.addEventListener('touchmove', e => {
 
 // Click handlers to navigate
 leftPanel.addEventListener('click', () => {
-    navigateWithTransition('/voice.html');
+    navigateWithTransition('/VoiceActorSide.html');
 });
 
 rightPanel.addEventListener('click', () => {
-    navigateWithTransition('/game.html?from=intro');
+    navigateWithTransition('/GameDesignerSide.html?from=intro');
 });
 
-document.querySelectorAll('a[href="/voice.html"]').forEach(link => {
+document.querySelectorAll('a[href="/VoiceActorSide.html"]').forEach(link => {
     link.addEventListener('click', event => {
         event.preventDefault();
         event.stopPropagation();
-        navigateWithTransition('/voice.html');
+        navigateWithTransition('/VoiceActorSide.html');
     });
 });
 
-document.querySelectorAll('a[href="/game.html"]').forEach(link => {
+document.querySelectorAll('a[href="/GameDesignerSide.html"]').forEach(link => {
     link.addEventListener('click', event => {
         event.preventDefault();
         event.stopPropagation();
-        navigateWithTransition('/game.html?from=intro');
+        navigateWithTransition('/GameDesignerSide.html?from=intro');
     });
 });
 

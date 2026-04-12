@@ -146,7 +146,7 @@ function generateFeatureList() {
     // Determine if current page should be treated like the index (home or game design page)
     const path = window.location.pathname;
     const isHomePage = path === '/' || path.endsWith('index.html');
-    const isGamePage = path.endsWith('game.html');
+    const isGamePage = path.endsWith('GameDesignerSide.html');
     const isIndexPage = isHomePage || isGamePage;
 
     // Filter features based on showOnIndex property when on index-style pages

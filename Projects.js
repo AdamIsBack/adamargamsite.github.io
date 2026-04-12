@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     // show highlights on either original index or the new game page
-    if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/" || window.location.pathname.endsWith("game.html")) {
+    if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/" || window.location.pathname.endsWith("GameDesignerSide.html")) {
       renderHighlightProjects();
     }
   }

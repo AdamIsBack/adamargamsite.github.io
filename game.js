@@ -103,7 +103,7 @@
 
         body.classList.add('to-portfolio');
         window.setTimeout(() => {
-            window.location.href = '/Project.html';
+            window.location.href = '/Explore.html';
         }, 1050);
     };
 
