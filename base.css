@@ -25,6 +25,23 @@ body {
     min-height: 100vh;
 }
 
+body.voice-page {
+    min-height: 100dvh;
+    padding: 0;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+body.voice-page .voice-stage {
+    width: 100vw;
+    height: 100dvh;
+    padding: clamp(1rem, 2.2vw, 2rem);
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    align-content: start;
+}
+
 /* Adjust header for dark mode */
 header {
     text-align: center;

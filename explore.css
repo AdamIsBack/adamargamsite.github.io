@@ -49,15 +49,15 @@ body::before {
 }
 
 .glass-board {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+    position: relative;
+    width: 100vw;
+    height: 100dvh;
     border: none;
     background: #000000;
     box-shadow: none;
     isolation: isolate;
     overflow: hidden;
+    container-type: size;
 }
 
 .shard {
@@ -144,7 +144,7 @@ body::before {
     letter-spacing: 0.07em;
     line-height: 0.95;
     text-align: center;
-    font-size: clamp(1.1rem, 3vw, 3.3rem);
+    font-size: clamp(1rem, 2.15cqw, 3.3rem);
     color: rgba(247, 245, 240, 0.93);
     text-shadow: 0 3px 16px rgba(0, 0, 0, 0.75);
     background: rgba(255, 21, 125, 0.4);
@@ -180,7 +180,7 @@ body::before {
 
 .shard-back { --poly: 0% 0%, 24% 0%, 0% 17%; --tx: 6%; --ty: 6%; --media-x: 8%; --media-y: 8%; }
 .shard-voice { --poly: 0% 17%, 24% 0%, 12% 72%, 0% 100%; --tx: 10%; --ty: 21%; --media-x: -26%; --media-y: 31%; --media-shift-x: -41%; }
-.shard-voice .shard-title { font-size: clamp(0.99rem, 2.7vw, 2.97rem); }
+.shard-voice .shard-title { font-size: clamp(0.9rem, 1.95cqw, 2.97rem); }
 .shard-about {
     --poly: 24% 0%, 49% 0%, 33% 46%, 12% 72%;
     --tx: 31%;
@@ -196,7 +196,7 @@ body::before {
     --media-scale: 0.85;
 }
 .shard-about .shard-media { background-repeat: no-repeat; }
-.shard-about .shard-title { font-size: clamp(1.375rem, 3.75vw, 4.125rem); }
+.shard-about .shard-title { font-size: clamp(1.1rem, 2.7cqw, 4.125rem); }
 .shard-side { --poly: 49% 0%, 100% 0%, 64% 35%; --tx: 70%; --ty: 10%; --media-x: 72%; --media-y: 15%; }
 .shard-art {
     --poly: 64% 35%, 100% 0%, 100% 48%;
@@ -217,12 +217,12 @@ body::before {
     background-image: url('Covers/FinLaLune.png');
     background-repeat: no-repeat;
 }
-.shard-art .shard-title { font-size: clamp(1.375rem, 3.75vw, 4.125rem); }
+.shard-art .shard-title { font-size: clamp(1.1rem, 2.7cqw, 4.125rem); }
 .shard-games { --poly: 33% 46%, 49% 0%, 64% 35%, 51% 84%, 47% 100%; --tx: 48.2%; --ty: 43%; --media-x: 49%; --media-y: 47%; }
-.shard-games .shard-title { font-size: clamp(1.705rem, 4.65vw, 5.115rem); }
-.shard-contact { --poly: 64% 35%, 100% 48%, 100% 100%, 51% 84%; --tx: 77%; --ty: 68%; --media-x: 50%; --media-y: 50%; --media-shift-x: 30%; --media-shift-y: 16%; --media-scale: 1.0; --media-hover-scale: 1.06; --media-size: contain; --media-rotate: 0deg; --media-hover-rotate: 10deg; }.shard-contact .shard-title { font-size: clamp(1.375rem, 3.75vw, 4.125rem); }.shard-time { --poly: 0% 100%, 12% 72%, 33% 46%, 47% 100%; --tx: 25%; --ty: 84%; --media-x: 22%; --media-y: 100%; --media-size: 27% 45%; --media-scale: 1; --media-hover-scale: 1.04; }
+.shard-games .shard-title { font-size: clamp(1.2rem, 3.35cqw, 5.115rem); }
+.shard-contact { --poly: 64% 35%, 100% 48%, 100% 100%, 51% 84%; --tx: 77%; --ty: 68%; --media-x: 50%; --media-y: 50%; --media-shift-x: 30%; --media-shift-y: 16%; --media-scale: 1.0; --media-hover-scale: 1.06; --media-size: contain; --media-rotate: 0deg; --media-hover-rotate: 10deg; }.shard-contact .shard-title { font-size: clamp(1.1rem, 2.7cqw, 4.125rem); }.shard-time { --poly: 0% 100%, 12% 72%, 33% 46%, 47% 100%; --tx: 25%; --ty: 84%; --media-x: 22%; --media-y: 100%; --media-size: 27% 45%; --media-scale: 1; --media-hover-scale: 1.04; }
 .shard-time .shard-media { background-color: #f91477; background-repeat: no-repeat; }
-.shard-time .shard-title { font-size: clamp(1.65rem, 4.5vw, 4.95rem); }
+.shard-time .shard-title { font-size: clamp(1.2rem, 3.25cqw, 4.95rem); }
 .shard-resume { --poly: 51% 84%, 100% 100%, 47% 100%; --tx: 67%; --ty: 95%; --media-x: 67%; --media-y: 95%; }
 
 body.ready .shard {
@@ -279,7 +279,7 @@ body.is-transitioning .shard.shard-exiting {
 
 @media (max-width: 980px) {
     .shard-title {
-        font-size: clamp(1.1rem, 5.4vw, 2.4rem);
+        font-size: clamp(1rem, 4.4cqw, 2.4rem);
     }
 }
 

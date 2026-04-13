@@ -10,10 +10,15 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     font-family: 'Lexend', sans-serif;
     background: #000;
     transition: opacity 0.42s ease, transform 0.42s ease, filter 0.42s ease;
+}
+
+body {
+    display: grid;
+    place-items: center;
 }
 
 body.page-transition-out {
@@ -22,9 +27,16 @@ body.page-transition-out {
     filter: brightness(0.58) contrast(1.12);
 }
 
-body::after {
+#intro-stage {
+    position: relative;
+    width: 100vw;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+#intro-stage::after {
     content: '';
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
@@ -36,9 +48,9 @@ body::after {
     pointer-events: none;
 }
 
-body::before {
+#intro-stage::before {
     content: '\00A9 2026 Adam Argam';
-    position: fixed;
+    position: absolute;
     left: 50%;
     bottom: calc((var(--footer-bar-height) - 1rem) / 2);
     transform: translateX(-50%);
@@ -52,7 +64,7 @@ body::before {
 }
 
 #split-container {
-    position: fixed;
+    position: absolute;
     top: var(--top-bar-height);
     bottom: var(--footer-bar-height);
     left: 0;
@@ -111,7 +123,7 @@ body::before {
 
 /* Banner at the top */
 #banner {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -171,30 +183,6 @@ body::before {
 .right-label {
     right: clamp(2rem, 5vw, 4rem);
     text-align: right;
-}
-
-/* bottom footer banner */
-#footer-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: var(--footer-bar-height);
-    background: transparent;
-    border: 0;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 0 0.75rem;
-    font-size: 0.9rem;
-    line-height: 1;
-    text-rendering: geometricPrecision;
-    visibility: visible;
-    opacity: 1;
-    isolation: isolate;
-    z-index: 2147483647;
 }
 
 #banner .banner-label:hover {

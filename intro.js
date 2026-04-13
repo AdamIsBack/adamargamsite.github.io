@@ -3,29 +3,6 @@ const leftPanel = document.getElementById('left-panel');
 const rightPanel = document.getElementById('right-panel');
 const container = document.getElementById('split-container');
 const body = document.body;
-const footerBanner = document.getElementById('footer-banner');
-
-function lockIntroFooterStyle() {
-    if (!footerBanner) {
-        return;
-    }
-
-    footerBanner.style.position = 'fixed';
-    footerBanner.style.left = '0';
-    footerBanner.style.right = '0';
-    footerBanner.style.bottom = '0';
-    footerBanner.style.height = '38px';
-    footerBanner.style.background = '#ff157d';
-    footerBanner.style.borderTop = '1px solid #b10a56';
-    footerBanner.style.borderBottom = '1px solid #b10a56';
-    footerBanner.style.color = '#fff';
-    footerBanner.style.display = 'flex';
-    footerBanner.style.alignItems = 'center';
-    footerBanner.style.justifyContent = 'center';
-    footerBanner.style.zIndex = '2147483647';
-    footerBanner.style.visibility = 'visible';
-    footerBanner.style.opacity = '1';
-}
 
 function navigateWithTransition(destination) {
     if (body.classList.contains('page-transition-out')) {
@@ -99,5 +76,3 @@ document.querySelectorAll('a[href="/GameDesignerSide.html"]').forEach(link => {
 
 // initialize panels to centre
 adjustPanels(window.innerWidth / 2);
-lockIntroFooterStyle();
-window.addEventListener('resize', lockIntroFooterStyle);
